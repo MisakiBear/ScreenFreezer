@@ -1,0 +1,34 @@
+﻿<Window x:Class="ScreenFreezer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="ScreenFreezer" Height="350" Width="1100"
+        WindowStyle="None" Topmost="True" WindowStartupLocation="CenterScreen"
+        WindowState="Maximized" AllowsTransparency="True"
+        ShowInTaskbar="False" Opacity="0.35">
+    <Window.Background>
+        <SolidColorBrush Color="White" Opacity="0.00"/>
+    </Window.Background>
+    <Grid>
+        <Label x:Name="ExitLabel" Content=">-Double click here to exit-&lt;"
+               Height="60" BorderThickness="12,12,0,0" Padding="0,0,0,0"
+               HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+               HorizontalAlignment="Left" VerticalAlignment="Top" Width="450"
+               FontSize="28" FontWeight="Bold"
+               MouseDoubleClick="ExitLabel_MouseDoubleClick" Background="White"/>
+        <Label x:Name="MessageLabel" Content=""
+               Height="180" BorderThickness="0,0,0,60" Padding="0,0,0,0"
+               HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+               HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="1050"
+               FontSize="20" FontWeight="Bold"
+               MouseDoubleClick="MessageLabel_MouseDoubleClick" Background="White"/>
+        <Label x:Name="TopLabel" BorderThickness="0,0,0,0" Padding="0,0,0,0" Background="Red"
+               VerticalAlignment="Top" Height="12" 
+               MouseDown="TopLabel_MouseDown" MouseEnter="TopLabel_MouseEnter" MouseLeave="TopLabel_MouseLeave"/>
+        <Label x:Name="LeftLabel" BorderThickness="0,0,0,0" Padding="0,0,0,0" Background="Blue"
+               HorizontalAlignment="Left" Width="12"
+               MouseDown="LeftLabel_MouseDown"/>
+    </Grid>
+</Window>
